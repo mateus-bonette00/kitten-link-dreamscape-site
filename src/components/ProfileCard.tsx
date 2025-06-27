@@ -1,4 +1,5 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import logo from "@/images/logo-600x600.png";
 
 const ProfileCard = () => {
   return (
@@ -6,8 +7,8 @@ const ProfileCard = () => {
       <div className="mb-4">
         <Avatar className="w-28 h-28 mx-auto border-4 border-white shadow-lg">
           <AvatarImage
-            src="/src/images/logo-600x600.png"
-            alt="Foto do perfil"
+            src={logo} // 👈 Aqui é o que estava faltando!
+            alt="Logo Cute Kittens"
           />
         </Avatar>
       </div>
