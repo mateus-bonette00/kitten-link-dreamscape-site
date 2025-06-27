@@ -5,6 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: "/kitten-link-dreamscape-site/", // 👈 ESSA LINHA É ESSENCIAL PRO GITHUB PAGES
   server: {
     host: "::",
     port: 8080,

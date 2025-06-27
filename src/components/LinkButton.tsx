@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 interface LinkButtonProps {
@@ -8,7 +7,12 @@ interface LinkButtonProps {
   variant?: "primary" | "secondary" | "outline";
 }
 
-const LinkButton = ({ href, icon, text, variant = "outline" }: LinkButtonProps) => {
+const LinkButton = ({
+  href,
+  icon,
+  text,
+  variant = "outline",
+}: LinkButtonProps) => {
   const getButtonStyles = () => {
     switch (variant) {
       case "primary":
@@ -25,9 +29,14 @@ const LinkButton = ({ href, icon, text, variant = "outline" }: LinkButtonProps) 
       asChild
       className={`w-full h-14 rounded-full mb-4 transition-all duration-300 hover:scale-105 hover:shadow-lg ${getButtonStyles()}`}
     >
-      <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3">
-        <span className="text-xl">{icon}</span>
-        <span className="font-medium">{text}</span>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-3"
+      >
+        {icon}
+        <span className="font-medium text-xl">{text}</span>
       </a>
     </Button>
   );
